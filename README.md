@@ -75,16 +75,52 @@ BlocProvider :
 
    -BLOCProvider.value
 
-BlocConsumer :
+
  
 
 BlocBuilder :
-
+   A widget that helps in rebuilding the UI based on any changes on BLOC state.
+   - rebuilds widget every time state changes
+   ```
+      BlocBuilder(<Bloc, Event>){
+         builder:(context, state){
+            return widget;
+         }
+      }
+   ```
+   - Extra Buildwhen parameter can be added to BlocBuilder to controll when to rebuild and when to not rebuild.
+     
+     ```
+      BlocBuilder(<Bloc, Event>){
+         buildWhen:(previousState){
+            return true/false
+         }
+         builder:(context, state){
+            return widget;
+         }
+      }
+     ```
 
 BlocListener :
+  A flutter widget that listens to the changes in state 
+  
+  - called once per state , not including initstate
+  - optional listenWhenn can also be added
+  ```
+  
+  ```
 
 
 
+### Diffrence in BlocBuilder and BlocListener
+
+- BB can be called multiple times, BL is just called once
+
+BlocConsumer :
+   A widget which is addition of BlocBuilder + BlocListener
+
+
+RepositoryProvider :
 
 
 TODO:
