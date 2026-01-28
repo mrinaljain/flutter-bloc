@@ -9,4 +9,6 @@ class Reset extends CounterEvent {}
 
 class DoubleIncrement extends CounterEvent {}
 
-class ToggleMethod extends CounterEvent {}
+class ToggleMethod extends CounterEvent {
+  ToggleMethod(bool isReverse);
+}

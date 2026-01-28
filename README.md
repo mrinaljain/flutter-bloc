@@ -2,6 +2,8 @@
 
 ## Getting Started
 
+
+"BLOC is not just a State Management Library , but it is also a Design Pattern as well as a Architecture Pattern"
   
 ## Cubit
 Cubit are special kind of stream components , which is based upon some functions which are called from UI component, those funchtions rebuild UI by emmiting diffrent States on a Stream.
@@ -112,7 +114,7 @@ BlocListener :
 
 
 
-### Diffrence in BlocBuilder and BlocListener
+### Diffrence in BlocBuilder and BlocListener [video](https://www.youtube.com/watch?v=NqUx-NfTts4&list=PLptHs0ZDJKt_T-oNj_6Q98v-tBnVf-S_o&index=4)
 
 - BB can be called multiple times, BL is just called once
 
@@ -121,6 +123,32 @@ BlocConsumer :
 
 
 RepositoryProvider :
+
+
+
+
+## BLOC Architecture
+
+- Presentation Layer
+- Bisiness Logic LAyer
+
+- Data Layer
+Responsibility is to garher data from diffrent sources [ Data Sources ]
+
+Further Divided into 
+   - Repositories
+
+      - Mostly maps the raw data [recived from data provider[API]] to model class.
+   - Data Providers
+    Daraprovider 's responsibility is to provide Data to the Repository Layer.
+
+   - Models
+   Model is a blueprint to the data your app will be working with.
+
+
+### How BLOC Processes  the Event recived and => updates the State ?
+
+
 
 
 TODO:

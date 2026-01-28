@@ -7,7 +7,6 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     on<Increment>((event, emit) {
       emit(
         state.copyWith(count: state.count + 1),
-        // CounterState(count:state.count + 1, isReverse: state.isReverse)
       );
     });
 

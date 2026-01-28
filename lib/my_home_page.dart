@@ -16,10 +16,9 @@ class MyHomePage extends StatelessWidget {
         actions: [
           BlocBuilder<CounterBloc, CounterState>(
             builder: (context, state) {
-              return IconButton(
-                onPressed: () => bloc.add(ToggleMethod()),
-                icon: state.isReverse ? Icon(Icons.toggle_on) : Icon(Icons.toggle_off),
-              );
+              return Switch(value: state.isReverse, onChanged: (currentValue){
+                bloc.add(ToggleMethod(currentValue));
+              });
             },
           ),
         ],
