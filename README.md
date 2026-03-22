@@ -52,7 +52,7 @@ Bloc method mai  hum UI se event bejte hai phir Bloc usko handle kryta hai , iss
 ## Widgets inside BLOC
 
 
-BlocProvider :
+### 1. BlocProvider 
   BlocProvider is a flutter widget which creates and provides all its childrens the access to that Bloc (also known as Dependency injection)
 
    - BlocProvider creates a single instance of BLOC uing a function which takes a BuildContext as an argument and returns a single instance of BLOC
@@ -75,12 +75,14 @@ BlocProvider :
    ```
    - BlocProvider also automatically closes the Bloc
 
-   -BLOCProvider.value
+   - BLOCProvider.value
+
+   - MultiBlocProvider : when we want to provide multiple blocs to single widget tree
 
 
  
 
-BlocBuilder :
+### 2. BlocBuilder 
    A widget that helps in rebuilding the UI based on any changes on BLOC state.
    - rebuilds widget every time state changes
    ```
@@ -103,7 +105,7 @@ BlocBuilder :
       }
      ```
 
-BlocListener :
+### 3. BlocListener 
   A flutter widget that listens to the changes in state 
   
   - called once per state , not including initstate
@@ -111,18 +113,24 @@ BlocListener :
   ```
   
   ```
-
+   - - MultiBlocListner : when we want to liten multiple blocs inside single widget tree
 
 
 ### Diffrence in BlocBuilder and BlocListener [video](https://www.youtube.com/watch?v=NqUx-NfTts4&list=PLptHs0ZDJKt_T-oNj_6Q98v-tBnVf-S_o&index=4)
 
 - BB can be called multiple times, BL is just called once
 
-BlocConsumer :
+### 4. BlocConsumer [BlocBuilder + BlocListener]
    A widget which is addition of BlocBuilder + BlocListener
+   - this will have listener as well as builder both param
+
+```
+
+```
 
 
-RepositoryProvider :
+### 5. RepositoryProvider :
+Repository Provider is a class , of which main function is to let flutter talk to outer data layer i.e internet, database etc.
 
 
 
